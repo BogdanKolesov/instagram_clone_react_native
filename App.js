@@ -24,7 +24,7 @@ export default function App() {
   const Stack = createNativeStackNavigator()
   const Tab = createBottomTabNavigator()
 
-  const bottomTabScreen = () => {
+  const BottomTabScreen = () => {
     return (
       <Tab.Navigator
         screenOptions={({ route }) => (
@@ -74,7 +74,7 @@ export default function App() {
           headerShown: false
         }}
       >
-        <Stack.Screen name='Bottom' component={bottomTabScreen} />
+        <Stack.Screen name='Bottom' component={BottomTabScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
