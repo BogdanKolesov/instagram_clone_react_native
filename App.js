@@ -10,6 +10,7 @@ import Search from './components/screens/Search'
 import Activity from './components/screens/Activity';
 import Reels from './components/screens/Reels';
 import Profile from './components/screens/Profile'
+import Status from './components/screenComponents/Status';
 
 
 export default function App() {
@@ -75,6 +76,7 @@ export default function App() {
         }}
       >
         <Stack.Screen name='Bottom' component={BottomTabScreen} />
+        <Stack.Screen name='Status' component={Status} />
       </Stack.Navigator>
     </NavigationContainer>
   );
