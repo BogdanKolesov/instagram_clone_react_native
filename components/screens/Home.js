@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, Text, StatusBar } from 'react-native';
+import { View, StyleSheet, Text, StatusBar, ScrollView } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Feather from 'react-native-vector-icons/Feather'
+import Stories from '../screenComponents/Stories';
 
 
 const Home = () => {
@@ -26,12 +27,17 @@ const Home = () => {
                     fontFamily: 'Lobster-Regular',
                     fontSize: 26,
                     fontWeight: '500'
-                }}>Kazgram</Text>
+                }}>Bogdanogram</Text>
                 <Feather name='navigation' style={{
                     fontSize: 26
                 }}
                 />
             </View>
+            <ScrollView style={{
+
+            }}>
+                <Stories />
+            </ScrollView>
         </View>
     );
 }
