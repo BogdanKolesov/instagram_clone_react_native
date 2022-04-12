@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Text, StatusBar, Image, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, StatusBar, Image, TouchableOpacity, TextInput } from 'react-native';
 import Ionic from 'react-native-vector-icons/Ionicons'
+import Feather from 'react-native-vector-icons/Feather'
 
 
 
@@ -58,19 +59,63 @@ const Status = ({ route, navigation }) => {
                 <View style={{
                     justifyContent: 'space-between',
                     flexDirection: 'row',
+                    alignItems: 'center',
                     width: '100%',
                     paddingLeft: 5
                 }}>
                     <Text style={{
                         color: 'white',
-                        fontSize: 14,
+                        fontSize: 15,
                     }}>
                         {name}
                     </Text>
-                    <TouchableOpacity>
-
+                    <TouchableOpacity style={{
+                        marginRight: '7%'
+                    }}>
+                        <Ionic name='close'
+                            onPress={() => navigation.goBack()}
+                            style={{
+                                fontSize: 28,
+                                color: 'white',
+                                opacity: 0.6
+                            }} />
                     </TouchableOpacity>
                 </View>
+            </View>
+            <Image source={image} style={{
+                position: 'absolute',
+                width: '100%',
+                height: '80%'
+            }} />
+            <View style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-around',
+                marginVertical: 10,
+                width: '100%'
+            }}>
+                <TextInput placeholder='Send message' placeholderTextColor='white'
+                    style={{
+                        borderColor: 'white',
+                        borderRadius: 25,
+                        width: '85%',
+                        height: 50,
+                        paddingLeft: 20,
+                        borderWidth: 1,
+                        color: 'white',
+                        fontSize: 20,
+
+                    }}
+                />
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Feather name='chevron-right' style={{
+                        color: 'white',
+                        fontSize: 30
+                    }} />
+                </TouchableOpacity>
             </View>
         </View>
     );
