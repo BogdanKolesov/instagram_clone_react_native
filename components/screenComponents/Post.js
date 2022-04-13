@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Image, Text, TouchableOpacity, TextInput } from 'react-native'
 import Feather from 'react-native-vector-icons/Feather'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Ionic from 'react-native-vector-icons/Ionicons'
+import Entypo from 'react-native-vector-icons/Entypo'
 
 
 
@@ -13,6 +14,48 @@ const Post = () => {
             postTitle: 'Navalny',
             postPersonImage: require('../../storage/images/1.jpg'),
             postImage: require('../../storage/images/2.jpg'),
+            likes: 131,
+            isLiked: false
+        },
+        {
+            postTitle: 'Navalny',
+            postPersonImage: require('../../storage/images/1.jpg'),
+            postImage: require('../../storage/images/5.jpg'),
+            likes: 111,
+            isLiked: false
+        },
+        {
+            postTitle: 'Navalny',
+            postPersonImage: require('../../storage/images/1.jpg'),
+            postImage: require('../../storage/images/6.jpg'),
+            likes: 421,
+            isLiked: false
+        },
+        {
+            postTitle: 'Navalny',
+            postPersonImage: require('../../storage/images/1.jpg'),
+            postImage: require('../../storage/images/4.jpg'),
+            likes: 151,
+            isLiked: false
+        },
+        {
+            postTitle: 'Navalny',
+            postPersonImage: require('../../storage/images/1.jpg'),
+            postImage: require('../../storage/images/3.jpg'),
+            likes: 541,
+            isLiked: false
+        },
+        {
+            postTitle: 'Navalny',
+            postPersonImage: require('../../storage/images/1.jpg'),
+            postImage: require('../../storage/images/2.jpg'),
+            likes: 543,
+            isLiked: false
+        },
+        {
+            postTitle: 'Navalny',
+            postPersonImage: require('../../storage/images/1.jpg'),
+            postImage: require('../../storage/images/1.jpg'),
             likes: 131,
             isLiked: false
         }
@@ -103,11 +146,68 @@ const Post = () => {
                                     fontSize: 24
                                 }} />
                             </View>
-                            <View>
+                            <View style={{
+                                marginHorizontal: 15
+                            }}>
                                 <Text>
-                                    Liked by {like ? 'you' : ''} {''}
+                                    Liked by {like ? 'you and' : ''} {''}
                                     {like ? data.likes + 1 : data.likes} others
                                 </Text>
+                                <Text style={{
+                                    fontSize: 14,
+                                    fontWeight: 'bold',
+                                    paddingVertical: 2
+                                }}>
+                                    Love and peace!
+                                </Text>
+                                <Text style={{
+                                    opacity: 0.4,
+                                    paddingVertical: 2
+                                }}>
+                                    View all comments
+                                </Text>
+                                <View style={{
+                                    flexDirection: 'row',
+                                    justifyContent: 'space-between'
+                                }}>
+                                    <View style={{
+                                        flexDirection: 'row',
+                                        alignItems: 'center',
+                                    }}>
+                                        <Image source={data.postPersonImage} style={{
+                                            width: 25,
+                                            height: 25,
+                                            borderRadius: 100,
+                                            backgroundColor: 'orange',
+                                            marginRight: 10
+                                        }} />
+                                        <TextInput placeholder='Add a comment' style={{
+                                            opacity: 0.5
+                                        }} />
+                                    </View>
+                                    <View style={{
+                                        flexDirection: 'row',
+                                        alignItems: 'center'
+                                    }}>
+                                        <Entypo name='emoji-happy' style={{
+                                            fontSize: 15,
+                                            color: 'blue',
+                                            opacity: 0.2,
+                                            marginRight: 10
+                                        }} />
+                                        <Entypo name='emoji-neutral' style={{
+                                            fontSize: 15,
+                                            color: 'pink',
+                                            opacity: 0.2,
+                                            marginRight: 10
+                                        }} />
+                                        <Entypo name='emoji-sad' style={{
+                                            fontSize: 15,
+                                            color: 'red',
+                                            opacity: 0.2
+                                        }} />
+                                    </View>
+                                </View>
                             </View>
                         </View>
                     )
