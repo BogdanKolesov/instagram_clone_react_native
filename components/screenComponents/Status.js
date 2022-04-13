@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, StyleSheet, Text, StatusBar, Image, TouchableOpacity, TextInput } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Text, Animated, StatusBar, Image, TouchableOpacity, TextInput } from 'react-native';
 import Ionic from 'react-native-vector-icons/Ionicons'
 import Feather from 'react-native-vector-icons/Feather'
 
@@ -8,6 +8,29 @@ import Feather from 'react-native-vector-icons/Feather'
 const Status = ({ route, navigation }) => {
     const { name } = route.params
     const { image } = route.params
+
+    useEffect(() => {
+        let timer = setTimeout(() => {
+            navigation.goBack()
+        }, 5000)
+
+        Animated.timing(progress, {
+            toValue: 5,
+            duration: 5000,
+            useNativeDriver: false
+        }).start()
+        return () => clearTimeout(timer)
+    }, []);
+
+    const [progress, setProgress] = useState(new Animated.Value(0));
+
+    const progressAnimation = progress.interpolate({
+        inputRange: [0, 5],
+        outputRange: ['0%', '100%']
+    })
+
+
+
     return (
         <View style={{
             backgroundColor: 'black',
@@ -25,12 +48,12 @@ const Status = ({ route, navigation }) => {
                 position: 'absolute',
                 top: 18
             }}>
-                <View style={{
+                <Animated.View style={{
                     height: '100%',
                     backgroundColor: 'white',
-                    width: '50%'
+                    width: progressAnimation
                 }}>
-                </View>
+                </Animated.View>
             </View>
             <View style={{
                 padding: 15,
