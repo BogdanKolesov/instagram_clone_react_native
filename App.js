@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
 import Ionic from 'react-native-vector-icons/Ionicons'
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
@@ -7,10 +7,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Home from './components/screens/Home'
 import Search from './components/screens/Search'
-import Activity from './components/screens/Activity';
-import Reels from './components/screens/Reels';
+import Activity from './components/screens/Activity'
+import Reels from './components/screens/Reels'
 import Profile from './components/screens/Profile'
-import Status from './components/screenComponents/Status';
+import Status from './components/screenComponents/Status'
 
 
 export default function App() {
