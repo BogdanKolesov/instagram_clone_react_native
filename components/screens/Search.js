@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
-import Searchbox from '../screenComponents/SearchBox';
+import { View, StyleSheet, Text, ScrollView, } from 'react-native';
+import SearchBox from '../screenComponents/SearchBox';
+import SearchContent from '../screenComponents/SearchContent';
 
 const Search = () => {
     return (
@@ -11,7 +12,8 @@ const Search = () => {
             position: 'relative'
         }}>
             <ScrollView>
-                <Searchbox />
+                <SearchBox />
+                <SearchContent />
             </ScrollView>
         </View>
     );
