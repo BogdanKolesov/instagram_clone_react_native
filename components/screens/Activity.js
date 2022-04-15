@@ -1,12 +1,10 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 const Activity = () => {
     return (
         <View>
-            <Text>
-                Activity
-            </Text>
+
         </View>
     );
 }

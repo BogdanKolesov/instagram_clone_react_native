@@ -12,6 +12,8 @@ const SearchContent = () => {
                 require('../../storage/images/3.jpg'),
                 require('../../storage/images/4.jpg'),
                 require('../../storage/images/5.jpg'),
+                require('../../storage/images/2.jpg'),
+
             ]
         },
         {
@@ -22,6 +24,9 @@ const SearchContent = () => {
                 require('../../storage/images/4.jpg'),
                 require('../../storage/images/3.jpg'),
                 require('../../storage/images/2.jpg'),
+                require('../../storage/images/5.jpg'),
+
+
             ]
         },
         {
@@ -38,19 +43,60 @@ const SearchContent = () => {
     ]
 
     return (
-        <View>
+        <View style={{
+            paddingHorizontal: 5
+        }}>
             {
                 searchData.map((data, index) => {
                     return (
-                        <>
+                        <View key={index} style={{ width: '100%' }}>
                             {
                                 data.id == 0 ? (
-                                    <View>
+                                    <View style={{
+                                        flexDirection: 'row',
+                                        flexWrap: 'wrap',
+                                        justifyContent: 'space-between',
+                                        width: '100%'
+                                    }}>
                                         {
                                             data.images.map((imageData, imgIndex) => {
                                                 return (
-                                                    <TouchableOpacity key={imgIndex}>
-                                                        <Image source={imageData} />
+                                                    <TouchableOpacity style={{
+                                                        paddingBottom: 2,
+                                                        width: '32%'
+                                                    }} key={imgIndex}>
+                                                        <Image style={{
+                                                            width: '100%',
+                                                            height: 150
+                                                        }} source={imageData} />
+                                                    </TouchableOpacity>
+                                                )
+                                            })
+                                        }
+                                    </View>
+                                ) : null}
+                            {
+                                data.id === 1 ? (
+
+                                    <View style={{
+                                        flexDirection: 'row',
+                                        flexWrap: 'wrap',
+                                        justifyContent: 'space-between',
+                                        width: '100%'
+
+                                    }}>
+                                        {
+                                            data.images.map((imageData, imgIndex) => {
+                                                return (
+                                                    <TouchableOpacity style={{
+                                                        paddingBottom: 2,
+                                                        width: '32%'
+
+                                                    }} key={imgIndex}>
+                                                        <Image style={{
+                                                            width: '100%',
+                                                            height: 150,
+                                                        }} source={imageData} />
                                                     </TouchableOpacity>
                                                 )
                                             })
@@ -58,7 +104,37 @@ const SearchContent = () => {
                                     </View>
                                 ) : null
                             }
-                        </>
+                            {
+                                data.id === 2 ? (
+
+                                    <View style={{
+                                        flexDirection: 'row',
+                                        flexWrap: 'wrap',
+                                        justifyContent: 'space-between',
+                                        width: '100%'
+
+                                    }}>
+                                        {
+                                            data.images.map((imageData, imgIndex) => {
+                                                return (
+                                                    <TouchableOpacity style={{
+                                                        paddingBottom: 2,
+                                                        width: '32%'
+
+                                                    }} key={imgIndex}>
+                                                        <Image style={{
+                                                            width: '100%',
+                                                            height: 150,
+                                                        }} source={imageData} />
+                                                    </TouchableOpacity>
+                                                )
+                                            })
+                                        }
+                                    </View>
+                                ) : null
+                            }
+                        </View>
+
                     )
                 })
             }
