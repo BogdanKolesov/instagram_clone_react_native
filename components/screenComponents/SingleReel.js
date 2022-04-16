@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { Video } from 'expo-av';
+import Ionic from 'react-native-vector-icons/Ionicons'
 
 
 const SingleReel = ({ item, index, currentIndex }) => {
@@ -10,7 +11,7 @@ const SingleReel = ({ item, index, currentIndex }) => {
 
     const videoRef = useRef()
     const [status, setStatus] = useState({})
-
+    const [mute, setMute] = useState(false);
 
 
     return (
@@ -20,6 +21,7 @@ const SingleReel = ({ item, index, currentIndex }) => {
         }}
         >
             <TouchableOpacity
+                activeOpacity={0.9}
                 onPress={() =>
                     status.isPlaying ? videoRef.current.pauseAsync() : videoRef.current.playAsync()
                 }
@@ -36,16 +38,28 @@ const SingleReel = ({ item, index, currentIndex }) => {
                     repeat={true}
                     shouldPlay={true}
                     source={item.video}
-
+                    volume={mute ? 0 : 1}
                     style={{
                         width: '100%',
                         height: '100%',
                         position: 'absolute'
                     }}
                 />
-
             </TouchableOpacity>
+            <Ionic
+                onPress={() => setMute(!mute)}
+                name={mute ? 'volume-mute' : 'volume-high-outline'}
+                style={{
+                    fontSize: 20,
+                    color: 'white',
+                    position: 'absolute',
+                    bottom: 300,
+                    right: 30,
+                    backgroundColor: 'rgba(52,52,52,0.9)',
+                    padding: 10,
+                    borderRadius: 100
 
+                }} />
         </View>
     );
 }
