@@ -31,7 +31,7 @@ const Reels = () => {
                     fontSize: 20,
                     fontWeight: 'bold',
                     color: 'white'
-                }}>Reels</Text>
+                }}>BogdanoReels</Text>
                 <Feather name='camera' style={{
                     fontSize: 25,
                     color: 'white'

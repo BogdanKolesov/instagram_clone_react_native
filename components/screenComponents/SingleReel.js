@@ -1,7 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native';
 import { Video } from 'expo-av';
 import Ionic from 'react-native-vector-icons/Ionicons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import Feather from 'react-native-vector-icons/Feather'
 
 
 const SingleReel = ({ item, index, currentIndex }) => {
@@ -12,6 +14,8 @@ const SingleReel = ({ item, index, currentIndex }) => {
     const videoRef = useRef()
     const [status, setStatus] = useState({})
     const [mute, setMute] = useState(false);
+    const [like, setLike] = useState(item.isLike);
+    const [likes, setLikes] = useState(item.likes);
 
 
     return (
@@ -53,10 +57,10 @@ const SingleReel = ({ item, index, currentIndex }) => {
                     fontSize: 20,
                     color: 'white',
                     position: 'absolute',
-                    bottom: 300,
-                    right: 30,
+                    bottom: '50%',
+                    right: 10,
                     backgroundColor: 'rgba(52,52,52,0.6)',
-                    padding: 12,
+                    padding: 15,
                     borderRadius: 100
                 }} />
             <View style={{
@@ -125,6 +129,75 @@ const SingleReel = ({ item, index, currentIndex }) => {
                             Original audio
                         </Text>
                     </View>
+                </View>
+            </View>
+            <View style={{
+                flexDirection: 'column',
+                position: 'absolute',
+                alignItems: 'center',
+                bottom: '10%',
+                right: '3%',
+            }}>
+                <TouchableOpacity
+                    onPress={() => setLike(!like)}
+                    style={{
+                        padding: 10,
+                        zIndex: 1,
+                        justifyContent: 'center',
+                        alignItems: 'center'
+                    }}>
+                    <AntDesign
+                        name={like ? 'heart' : 'hearto'}
+                        style={{
+                            color: like ? 'red' : 'white',
+                            fontSize: 25
+                        }} />
+                    <Text style={{
+                        color: 'white'
+                    }}>
+                        {like ? item.likes + 1 : item.likes}
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Ionic name='ios-chatbubble-outline' style={{
+                        color: 'white',
+                        fontSize: 25,
+                        padding: 10,
+                        zIndex: 1
+                    }} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Ionic name='paper-plane-outline' style={{
+                        color: 'white',
+                        fontSize: 25,
+                        padding: 10,
+                        zIndex: 1
+                    }} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Feather name='more-vertical' style={{
+                        color: 'white',
+                        fontSize: 25,
+                        padding: 10,
+                        zIndex: 1
+                    }} />
+                </TouchableOpacity>
+                <View style={{
+                    width: 30,
+                    height: 30,
+                    borderRadius: 10,
+                    borderWidth: 2,
+                    borderColor: 'white',
+                    magin: 10
+                }}>
+                    <Image source={item.postProfile}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            borderRadius: 10,
+                            resizeMode: 'cover'
+                        }}
+                    />
                 </View>
             </View>
         </View>
