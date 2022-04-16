@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
 
-const SearchContent = () => {
+const SearchContent = (props) => {
 
     const searchData = [
         {
@@ -61,10 +61,13 @@ const SearchContent = () => {
                                         {
                                             data.images.map((imageData, imgIndex) => {
                                                 return (
-                                                    <TouchableOpacity style={{
-                                                        paddingBottom: 2,
-                                                        width: '32%'
-                                                    }} key={imgIndex}>
+                                                    <TouchableOpacity
+                                                        onPressIn={() => props.data(imageData)}
+                                                        onPressOut={() => props.data(null)}
+                                                        style={{
+                                                            paddingBottom: 2,
+                                                            width: '32%'
+                                                        }} key={imgIndex}>
                                                         <Image style={{
                                                             width: '100%',
                                                             height: 150
@@ -88,11 +91,14 @@ const SearchContent = () => {
                                         {
                                             data.images.map((imageData, imgIndex) => {
                                                 return (
-                                                    <TouchableOpacity style={{
-                                                        paddingBottom: 2,
-                                                        width: '32%'
+                                                    <TouchableOpacity
+                                                        onPressIn={() => props.data(imageData)}
+                                                        onPressOut={() => props.data(null)}
+                                                        style={{
+                                                            paddingBottom: 2,
+                                                            width: '32%'
 
-                                                    }} key={imgIndex}>
+                                                        }} key={imgIndex}>
                                                         <Image style={{
                                                             width: '100%',
                                                             height: 150,
@@ -117,11 +123,14 @@ const SearchContent = () => {
                                         {
                                             data.images.map((imageData, imgIndex) => {
                                                 return (
-                                                    <TouchableOpacity style={{
-                                                        paddingBottom: 2,
-                                                        width: '32%'
+                                                    <TouchableOpacity
+                                                        onPressIn={() => props.data(imageData)}
+                                                        onPressOut={() => props.data(null)}
+                                                        style={{
+                                                            paddingBottom: 2,
+                                                            width: '32%'
 
-                                                    }} key={imgIndex}>
+                                                        }} key={imgIndex}>
                                                         <Image style={{
                                                             width: '100%',
                                                             height: 150,

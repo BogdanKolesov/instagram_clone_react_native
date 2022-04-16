@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, ScrollView, TouchableOpacity, SatusBar } from 'react-native';
 import SearchBox from '../screenComponents/SearchBox';
 import SearchContent from '../screenComponents/SearchContent';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
 const Search = () => {
 
-    const [image, setImage] = useState();
+    const [image, setImage] = useState(null)
+
+    const windowWidth = Dimensions.get('window').width
+    const windowHeight = Dimensions.get('window').height
+
+    const getData = (data) => {
+        setImage(data)
+    }
 
     return (
         <View style={{
@@ -17,7 +24,7 @@ const Search = () => {
         }}>
             <ScrollView>
                 <SearchBox />
-                <SearchContent />
+                <SearchContent data={getData} />
                 <TouchableOpacity style={{
                     margin: 25,
                     justifyContent: 'center',
@@ -29,6 +36,26 @@ const Search = () => {
                     }} />
                 </TouchableOpacity>
             </ScrollView>
+            {
+                image ?
+                    (
+                        <View>
+                            <StatusBar backgroundColor='#525252' barStyle='dark-content' />
+                            <View style={{
+                                position: 'absolute',
+                                top: windowheight / 6,
+                                left: windowHeight / 18,
+                                backgroundColor: 'white',
+                                width: 350,
+                                height: 465,
+                                zIndex: 1,
+                                elevation: 50
+                            }}>
+
+                            </View>
+                        </View>
+                    ) : null
+            }
         </View>
     );
 }
