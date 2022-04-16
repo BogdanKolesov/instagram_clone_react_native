@@ -30,6 +30,7 @@ export default function App() {
       <Tab.Navigator
         screenOptions={({ route }) => (
           {
+            tabBarHideOnKeyboard: true,
             tabBarShowLabel: false,
             headerShown: false,
             tabBarStyle: {
