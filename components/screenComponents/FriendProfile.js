@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 import Ionic from 'react-native-vector-icons/Ionicons'
+import Feather from 'react-native-vector-icons/Feather'
+import ProfileBody from './ProfileBody';
 
 const FriendProfile = ({ route, navigation }) => {
     const { name, profileImage, following, followers, posts, follow } = route.params
@@ -11,14 +13,36 @@ const FriendProfile = ({ route, navigation }) => {
             backgroundColor: 'white',
             padding: 10
         }}>
-            <View>
+            <View style={{
+                flexDirection: 'row',
+                alignItems: 'center'
+            }}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Ionic name='arrow-back' style={{
                         fontSize: 28,
                         color: 'black'
                     }} />
                 </TouchableOpacity>
+                <View style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    width: '94%'
+                }}>
+                    <Text style={{
+                        fontSize: 18,
+                        fontWeight: 'bold'
+                    }}>
+                        {name}
+                    </Text>
+                    <Feather name='more-vertical'
+                        style={{
+                            fontSize: 20,
+                            color: 'black'
+                        }} />
+                </View>
             </View>
+            <ProfileBody />
         </View>
     );
 }
