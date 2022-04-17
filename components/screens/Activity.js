@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { friendsProfileData } from '../screenComponents/Database';
 
 const Activity = () => {
+
+
     return (
         <View style={{
             width: '100%',
@@ -31,6 +33,7 @@ const Activity = () => {
                 }}>
                     {
                         friendsProfileData.slice(0, 3).map((data, index) => {
+
                             return (
                                 <TouchableOpacity key={index}>
                                     <Text>
@@ -52,6 +55,8 @@ const Activity = () => {
                 </Text>
                 {
                     friendsProfileData.slice(3, 6).map((data, index) => {
+                        const [follow, setFollow] = useState(data.follow);
+
                         return (
                             <View key={index} style={{
                                 width: '100%',
@@ -68,7 +73,7 @@ const Activity = () => {
                                         flexDirection: 'row',
                                         justifyContent: 'space-between',
                                         maxWidth: '64%',
-                                        alignItems: 'center'
+                                        alignItems: 'center',
                                     }}>
                                         <Image source={data.profileImage} style={{
                                             width: 45,
@@ -86,6 +91,31 @@ const Activity = () => {
                                             </Text>
                                             , who you might know, is on Bogdanogram
                                         </Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity
+                                        activeOpacity={0.3}
+                                        onPress={() => setFollow(!follow)}
+                                        style={{
+                                            width: follow ? 72 : 68
+                                        }}>
+                                        <View style={{
+                                            width: '100%',
+                                            height: 30,
+                                            backgroundColor: follow ? null : '#3493d9',
+                                            borderWidth: follow ? 1 : 0,
+                                            borderColor: follow ? '#dedede' : 'null',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            borderRadius: 5
+                                        }}>
+                                            <Text style={{
+                                                color: follow ? 'black' : 'white'
+                                            }}>
+                                                {
+                                                    follow ? 'Following' : 'Follow'
+                                                }
+                                            </Text>
+                                        </View>
                                     </TouchableOpacity>
                                 </View>
                             </View>
