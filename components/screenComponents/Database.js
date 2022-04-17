@@ -35,7 +35,7 @@ export const videoData = [
 export const friendsProfileData = [
     {
         name: 'Andrew_Wolf',
-        accoundName: 'Andrew Wolf',
+        accountName: 'Andrew Wolf',
         profileImage: require('../../storage/images/3.jpg'),
         posts: 176,
         followers: 987,
@@ -44,7 +44,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Sofi_Lesova',
-        accoundName: 'Sofi Lesova',
+        accountName: 'Sofi Lesova',
         profileImage: require('../../storage/images/4.jpg'),
         posts: 426,
         followers: 941,
@@ -53,7 +53,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Alexander_Kameo',
-        accoundName: 'Alexander Kameo',
+        accountName: 'Alexander Kameo',
         profileImage: require('../../storage/images/1.jpg'),
         posts: 2,
         followers: 41,
@@ -62,7 +62,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Navalny',
-        accoundName: 'Alexey_Navalny',
+        accountName: 'Alexey_Navalny',
         profileImage: require('../../storage/images/6.jpg'),
         posts: 999,
         followers: 947,
@@ -71,7 +71,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Max_Katz',
-        accoundName: 'Maxim Katz',
+        accountName: 'Maxim Katz',
         profileImage: require('../../storage/images/5.jpg'),
         posts: 9995866,
         followers: 996796,
@@ -80,7 +80,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Alexander_Lesov',
-        accoundName: 'Alexander Lesov',
+        accountName: 'Alexander Lesov',
         profileImage: require('../../storage/images/3.jpg'),
         posts: 11,
         followers: 94,
@@ -89,7 +89,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Vadim_Smolianinov',
-        accoundName: 'Vadim Smolianinov',
+        accountName: 'Vadim Smolianinov',
         profileImage: require('../../storage/images/5.jpg'),
         posts: 1256,
         followers: 537,
@@ -98,7 +98,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Daniel_K',
-        accoundName: 'Daniel K',
+        accountName: 'Daniel K',
         profileImage: require('../../storage/images/6.jpg'),
         posts: 4,
         followers: 24,
@@ -107,7 +107,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Alexander_Kameo',
-        accoundName: 'Alexander_Kameo',
+        accountName: 'Alexander_Kameo',
         profileImage: require('../../storage/images/4.jpg'),
         posts: 14,
         followers: 27,
@@ -116,7 +116,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Some_Guy',
-        accoundName: 'Some Guy',
+        accountName: 'Some Guy',
         profileImage: require('../../storage/images/2.jpg'),
         posts: 3,
         followers: 2,
@@ -125,7 +125,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Andrew_Wolf',
-        accoundName: 'Andrew Wolf',
+        accountName: 'Andrew Wolf',
         profileImage: require('../../storage/images/3.jpg'),
         posts: 176,
         followers: 987,
@@ -134,7 +134,7 @@ export const friendsProfileData = [
     },
     {
         name: 'Sofi_Lesova',
-        accoundName: 'Sofi Lesova',
+        accountName: 'Sofi Lesova',
         profileImage: require('../../storage/images/4.jpg'),
         posts: 426,
         followers: 941,

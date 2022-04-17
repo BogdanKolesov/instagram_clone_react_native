@@ -183,7 +183,7 @@ const Activity = () => {
                                                             fontSize: 12,
                                                             opacity: 0.5
                                                         }}>
-                                                            {data.accoundName}
+                                                            {data.accountName}
                                                         </Text>
                                                         <Text style={{
                                                             fontSize: 12,
