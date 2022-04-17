@@ -123,4 +123,22 @@ export const friendsProfileData = [
         following: 4,
         follow: false
     },
+    {
+        name: 'Andrew_Wolf',
+        accoundName: 'Andrew Wolf',
+        profileImage: require('../../storage/images/3.jpg'),
+        posts: 176,
+        followwers: 987,
+        following: 123,
+        follow: false
+    },
+    {
+        name: 'Sofi_Lesova',
+        accoundName: 'Sofi Lesova',
+        profileImage: require('../../storage/images/4.jpg'),
+        posts: 426,
+        followwers: 941,
+        following: 113,
+        follow: false
+    },
 ]
