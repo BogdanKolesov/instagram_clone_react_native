@@ -87,11 +87,13 @@ const FriendProfile = ({ route, navigation }) => {
                                                 borderColor: '#dedede',
                                                 borderRadius: 2,
                                             }}>
-                                                <TouchableOpacity style={{
-                                                    position: 'absolute',
-                                                    top: 10,
-                                                    right: 10
-                                                }}>
+                                                <TouchableOpacity
+                                                    onPress={() => setClose(!close)}
+                                                    style={{
+                                                        position: 'absolute',
+                                                        top: 10,
+                                                        right: 10
+                                                    }}>
                                                     <AntDesign name='close' style={{
                                                         fontSize: 20,
                                                         color: 'black',
@@ -113,6 +115,28 @@ const FriendProfile = ({ route, navigation }) => {
                                                 <Text>
                                                     {data.accountName}
                                                 </Text>
+                                                <TouchableOpacity
+                                                    onPress={() => setIsFollow(!isFollow)}
+                                                    style={{ width: '80%', paddingVertical: 10 }}>
+                                                    <View style={{
+                                                        width: '100%',
+                                                        height: 30,
+                                                        borderRadius: 5,
+                                                        backgroundColor: isFollow ? null : '#3493d9',
+                                                        borderWidth: isFollow ? 1 : 0,
+                                                        borderColor: '#dedede',
+                                                        justifyContent: 'center',
+                                                        alignItems: 'center'
+                                                    }}>
+                                                        <Text style={{
+                                                            color: isFollow ? 'black' : 'white'
+                                                        }}>
+                                                            {
+                                                                isFollow ? 'Following' : 'Follow'
+                                                            }
+                                                        </Text>
+                                                    </View>
+                                                </TouchableOpacity>
                                             </View>
                                         )}
                                 </View>

@@ -83,12 +83,21 @@ const Activity = () => {
                                     paddingVertical: 20,
                                     width: '100%'
                                 }}>
-                                    <TouchableOpacity style={{
-                                        flexDirection: 'row',
-                                        justifyContent: 'space-between',
-                                        maxWidth: '64%',
-                                        alignItems: 'center',
-                                    }}>
+                                    <TouchableOpacity
+                                        onPress={() => navigation.push('FriendProfile', {
+                                            name: data.name,
+                                            profileImage: data.profileImage,
+                                            follow: data.follow,
+                                            posts: data.posts,
+                                            following: data.following,
+                                            followers: data.followers
+                                        })}
+                                        style={{
+                                            flexDirection: 'row',
+                                            justifyContent: 'space-between',
+                                            maxWidth: '64%',
+                                            alignItems: 'center',
+                                        }}>
                                         <Image source={data.profileImage} style={{
                                             width: 45,
                                             height: 45,
@@ -159,11 +168,20 @@ const Activity = () => {
                                             justifyContent: 'space-between'
                                         }}>
                                             <View>
-                                                <TouchableOpacity style={{
-                                                    flexDirection: 'row',
-                                                    alignItems: 'center',
-                                                    maxWidth: '64%'
-                                                }}>
+                                                <TouchableOpacity
+                                                    onPress={() => navigation.push('FriendProfile', {
+                                                        name: data.name,
+                                                        profileImage: data.profileImage,
+                                                        follow: data.follow,
+                                                        posts: data.posts,
+                                                        following: data.following,
+                                                        followers: data.followers
+                                                    })}
+                                                    style={{
+                                                        flexDirection: 'row',
+                                                        alignItems: 'center',
+                                                        maxWidth: '64%'
+                                                    }}>
                                                     <Image source={data.profileImage} style={{
                                                         width: 45,
                                                         height: 45,
