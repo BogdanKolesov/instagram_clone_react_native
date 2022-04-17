@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 import Ionic from 'react-native-vector-icons/Ionicons'
 import Feather from 'react-native-vector-icons/Feather'
-import ProfileBody from './ProfileBody';
+import { ProfileBody, ProfileButtons } from './ProfileBody';
 
 const FriendProfile = ({ route, navigation }) => {
     const { name, accountName, profileImage, following, followers, posts, follow } = route.params
@@ -51,6 +51,7 @@ const FriendProfile = ({ route, navigation }) => {
                 following={following}
                 accountName={accountName}
             />
+            <ProfileButtons id={1} />
         </View>
     );
 }
