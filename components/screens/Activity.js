@@ -39,7 +39,14 @@ const Activity = () => {
                         friendsProfileData.slice(0, 3).map((data, index) => {
                             return (
                                 <TouchableOpacity
-                                    onPress={() => navigation.push('FriendProfile')}
+                                    onPress={() => navigation.push('FriendProfile', {
+                                        name: data.name,
+                                        profileImage: data.profileImage,
+                                        follow: data.follow,
+                                        posts: data.posts,
+                                        following: data.following,
+                                        followers: data.followers
+                                    })}
                                     key={index}>
                                     <Text style={{
                                         paddingRight: 3
