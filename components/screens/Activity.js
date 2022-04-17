@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { friendsProfileData } from '../screenComponents/Database';
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import { useNavigation } from '@react-navigation/native';
 
 const Activity = () => {
-
+    const navigation = useNavigation()
 
     return (
         <View style={{
@@ -36,9 +37,10 @@ const Activity = () => {
                 }}>
                     {
                         friendsProfileData.slice(0, 3).map((data, index) => {
-
                             return (
-                                <TouchableOpacity key={index}>
+                                <TouchableOpacity
+                                    onPress={() => navigation.push('FriendProfile')}
+                                    key={index}>
                                     <Text style={{
                                         paddingRight: 3
                                     }}>
