@@ -105,9 +105,10 @@ const Post = () => {
                                 justifyContent: 'center',
                                 alignItems: 'center'
                             }}>
-                                <Image source={data.postImage} style={{
-                                    width: '100%', height: 400
-                                }} />
+                                <Image
+                                    source={data.postImage} style={{
+                                        width: '100%', height: 400
+                                    }} />
                             </View>
                             <View style={{
                                 flexDirection: 'row',
