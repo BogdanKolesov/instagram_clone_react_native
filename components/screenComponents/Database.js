@@ -38,7 +38,7 @@ export const friendsProfileData = [
         accoundName: 'Andrew Wolf',
         profileImage: require('../../storage/images/3.jpg'),
         posts: 176,
-        followwers: 987,
+        followers: 987,
         following: 123,
         follow: false
     },
@@ -47,7 +47,7 @@ export const friendsProfileData = [
         accoundName: 'Sofi Lesova',
         profileImage: require('../../storage/images/4.jpg'),
         posts: 426,
-        followwers: 941,
+        followers: 941,
         following: 113,
         follow: false
     },
@@ -56,7 +56,7 @@ export const friendsProfileData = [
         accoundName: 'Alexander Kameo',
         profileImage: require('../../storage/images/1.jpg'),
         posts: 2,
-        followwers: 41,
+        followers: 41,
         following: 7,
         follow: false
     },
@@ -65,7 +65,7 @@ export const friendsProfileData = [
         accoundName: 'Alexey_Navalny',
         profileImage: require('../../storage/images/6.jpg'),
         posts: 999,
-        followwers: 947,
+        followers: 947,
         following: 14,
         follow: false
     },
@@ -74,7 +74,7 @@ export const friendsProfileData = [
         accoundName: 'Maxim Katz',
         profileImage: require('../../storage/images/5.jpg'),
         posts: 9995866,
-        followwers: 996796,
+        followers: 996796,
         following: 5436,
         follow: false
     },
@@ -83,7 +83,7 @@ export const friendsProfileData = [
         accoundName: 'Alexander Lesov',
         profileImage: require('../../storage/images/3.jpg'),
         posts: 11,
-        followwers: 94,
+        followers: 94,
         following: 11,
         follow: false
     },
@@ -92,7 +92,7 @@ export const friendsProfileData = [
         accoundName: 'Vadim Smolianinov',
         profileImage: require('../../storage/images/5.jpg'),
         posts: 1256,
-        followwers: 537,
+        followers: 537,
         following: 15,
         follow: false
     },
@@ -101,7 +101,7 @@ export const friendsProfileData = [
         accoundName: 'Daniel K',
         profileImage: require('../../storage/images/6.jpg'),
         posts: 4,
-        followwers: 24,
+        followers: 24,
         following: 5,
         follow: false
     },
@@ -110,7 +110,7 @@ export const friendsProfileData = [
         accoundName: 'Alexander_Kameo',
         profileImage: require('../../storage/images/4.jpg'),
         posts: 14,
-        followwers: 27,
+        followers: 27,
         following: 16,
         follow: false
     },
@@ -119,7 +119,7 @@ export const friendsProfileData = [
         accoundName: 'Some Guy',
         profileImage: require('../../storage/images/2.jpg'),
         posts: 3,
-        followwers: 2,
+        followers: 2,
         following: 4,
         follow: false
     },
@@ -128,7 +128,7 @@ export const friendsProfileData = [
         accoundName: 'Andrew Wolf',
         profileImage: require('../../storage/images/3.jpg'),
         posts: 176,
-        followwers: 987,
+        followers: 987,
         following: 123,
         follow: false
     },
@@ -137,7 +137,7 @@ export const friendsProfileData = [
         accoundName: 'Sofi Lesova',
         profileImage: require('../../storage/images/4.jpg'),
         posts: 426,
-        followwers: 941,
+        followers: 941,
         following: 113,
         follow: false
     },

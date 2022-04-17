@@ -5,7 +5,7 @@ import Feather from 'react-native-vector-icons/Feather'
 import ProfileBody from './ProfileBody';
 
 const FriendProfile = ({ route, navigation }) => {
-    const { name, profileImage, following, followers, posts, follow } = route.params
+    const { name, accountName, profileImage, following, followers, posts, follow } = route.params
     return (
         <View style={{
             width: '100%',
@@ -42,7 +42,15 @@ const FriendProfile = ({ route, navigation }) => {
                         }} />
                 </View>
             </View>
-            <ProfileBody />
+            <ProfileBody
+                name={name}
+                profileImage={profileImage}
+                posts={posts}
+                follow={follow}
+                followers={followers}
+                following={following}
+                accountName={accountName}
+            />
         </View>
     );
 }
