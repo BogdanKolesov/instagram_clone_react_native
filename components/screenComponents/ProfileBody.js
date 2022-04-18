@@ -15,13 +15,18 @@ export const ProfileBody = ({
     return (
         <View>
             {
-                accountName ? null : (
+                accountName ? (
+                    <View>
+
+                    </View>
+                ) : (
                     <View style={{
                         flexDirection: 'row',
                         alignItems: 'center',
                         justifyContent: 'space-around',
                         paddingVertical: 20
                     }}>
+
                         <View style={{
                             alignItems: 'center'
                         }}>
@@ -97,7 +102,7 @@ export const ProfileButtons = ({ id }) => {
     return (
         <>
             {
-                id == 0 ? null : (
+                id == 0 ? (null) : (
                     <View style={{
                         width: '100%',
                         flexDirection: 'row',
