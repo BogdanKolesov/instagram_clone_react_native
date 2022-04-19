@@ -39,11 +39,18 @@ export const ProfileBody = ({
                                 opacity: 0.5
                             }} />
                         </View>
-                        <View>
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center'
+                        }}>
                             <Feather name='plus-square' style={{
                                 fontSize: 25,
                                 color: 'black',
                                 paddingHorizontal: 15
+                            }} />
+                            <Feather name='menu' style={{
+                                fontSize: 25,
+                                color: 'black'
                             }} />
                         </View>
                     </View>
@@ -131,7 +138,28 @@ export const ProfileButtons = ({ id }) => {
     return (
         <>
             {
-                id == 0 ? (null) : (
+                id == 0 ? (
+                    <View style={{
+                        width: '100%',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'space-evenly',
+                        paddingVertical: 5
+                    }}>
+                        <TouchableOpacity>
+                            <View style={{
+                                width: '100%',
+                                height: 35,
+                                borderRadius: 5,
+                                borderColor: '#dedede'
+                            }}>
+                                <Text>
+                                    Edit Profile
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+                ) : (
                     <View style={{
                         width: '100%',
                         flexDirection: 'row',
