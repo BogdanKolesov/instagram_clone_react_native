@@ -16,11 +16,39 @@ export const ProfileBody = ({
         <View>
             {
                 accountName ? (
-                    <View>
-
+                    <View style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        paddingHorizontal: 10
+                    }}>
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center'
+                        }}>
+                            <Text style={{
+                                fontSize: 18,
+                                fontWeight: 'bold'
+                            }}>
+                                {accountName}
+                            </Text>
+                            <Feather name='chevron-down' style={{
+                                fontSize: 20,
+                                color: 'black',
+                                paddingHorizontal: 5,
+                                opacity: 0.5
+                            }} />
+                        </View>
+                        <View>
+                            <Feather name='plus-square' style={{
+                                fontSize: 25,
+                                color: 'black',
+                                paddingHorizontal: 15
+                            }} />
+                        </View>
                     </View>
                 ) : (
-                    <View></View>
+                    <View><Text>Hello</Text></View>
                 )
             }
             <View style={{

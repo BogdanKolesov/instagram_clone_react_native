@@ -11,7 +11,7 @@ const Profile = () => {
         }}>
             <ProfileBody
                 name='Alexander Lesov'
-                accounName='Alexander_Lesov'
+                accountName='alexander_lesov'
                 profileImage={require('../../storage/images/7.png')}
                 followers={314}
                 following={102}
