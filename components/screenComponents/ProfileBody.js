@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather'
-
+import { useNavigation } from '@react-navigation/native';
 
 export const ProfileBody = ({
     name,
@@ -13,6 +13,7 @@ export const ProfileBody = ({
     posts
 }) => {
     return (
+
         <View>
             {
                 accountName ? (
@@ -134,7 +135,7 @@ export const ProfileBody = ({
 
 export const ProfileButtons = ({ id }) => {
     const [follow, setFollow] = useState(follow);
-
+    const navigation = useNavigation()
     return (
         <>
             {
@@ -146,14 +147,27 @@ export const ProfileButtons = ({ id }) => {
                         justifyContent: 'space-evenly',
                         paddingVertical: 5
                     }}>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => navigatoin.push('EditProfile')}
+                            style={{
+                                width: '100%'
+                            }}>
                             <View style={{
                                 width: '100%',
                                 height: 35,
                                 borderRadius: 5,
-                                borderColor: '#dedede'
+                                borderColor: '#dedede',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderWidth: 1,
+
                             }}>
-                                <Text>
+                                <Text style={{
+                                    fontWeight: 'bold',
+                                    fontSize: 14,
+                                    letterSpacing: 1,
+                                    opacity: 0.5
+                                }}>
                                     Edit Profile
                                 </Text>
                             </View>
