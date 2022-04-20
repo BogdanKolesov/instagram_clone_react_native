@@ -133,7 +133,7 @@ export const ProfileBody = ({
     );
 }
 
-export const ProfileButtons = ({ id }) => {
+export const ProfileButtons = ({ id, name, accountName, profileImage }) => {
     const [follow, setFollow] = useState(follow);
     const navigation = useNavigation()
     return (
@@ -148,7 +148,11 @@ export const ProfileButtons = ({ id }) => {
                         paddingVertical: 5
                     }}>
                         <TouchableOpacity
-                            onPress={() => navigation.push('EditProfile')}
+                            onPress={() => navigation.push('EditProfile', {
+                                name: name,
+                                accountName: accountName,
+                                profileImage: profileImage
+                            })}
                             style={{
                                 width: '100%'
                             }}>
