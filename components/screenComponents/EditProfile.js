@@ -69,7 +69,7 @@ const EditProfile = ({ route, navigation }) => {
                     }}>
                         Name
                     </Text>
-                    <TextInput placeholder='name' defaultValue={name}
+                    <TextInput placeholder='Name' defaultValue={name}
                         style={{
                             fontSize: 16,
                             borderBottomWidth: 1,
@@ -85,7 +85,7 @@ const EditProfile = ({ route, navigation }) => {
                     }}>
                         Account name
                     </Text>
-                    <TextInput placeholder='name' defaultValue={accountName}
+                    <TextInput placeholder='Account name' defaultValue={accountName}
                         style={{
                             fontSize: 16,
                             borderBottomWidth: 1,
