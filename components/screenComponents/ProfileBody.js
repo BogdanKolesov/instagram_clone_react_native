@@ -148,7 +148,7 @@ export const ProfileButtons = ({ id }) => {
                         paddingVertical: 5
                     }}>
                         <TouchableOpacity
-                            onPress={() => navigatoin.push('EditProfile')}
+                            onPress={() => navigation.push('EditProfile')}
                             style={{
                                 width: '100%'
                             }}>

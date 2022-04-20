@@ -12,6 +12,7 @@ import Reels from './components/screens/Reels'
 import Profile from './components/screens/Profile'
 import Status from './components/screenComponents/Status'
 import FriendProfile from './components/screenComponents/FriendProfile';
+import EditProfile from './components/screenComponents/EditProfile';
 
 
 export default function App() {
@@ -80,6 +81,7 @@ export default function App() {
         <Stack.Screen name='Bottom' component={BottomTabScreen} />
         <Stack.Screen name='Status' component={Status} />
         <Stack.Screen name='FriendProfile' component={FriendProfile} />
+        <Stack.Screen name='EditProfile' component={EditProfile} />
 
       </Stack.Navigator>
     </NavigationContainer>
