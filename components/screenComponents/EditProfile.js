@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity, Image, ToastAndroid } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Image, ToastAndroid, TextInput } from 'react-native';
 import Ionic from 'react-native-vector-icons/Ionicons'
 
 
@@ -39,6 +39,59 @@ const EditProfile = ({ route, navigation }) => {
                         color: '#3493d9'
                     }} />
                 </TouchableOpacity>
+            </View>
+            <View style={{
+                padding: 20,
+                alignItems: 'center',
+
+            }}>
+                <Image source={profileImage} style={{
+                    borderRadius: 100,
+                    width: 88,
+                    height: 88
+                }} />
+                <Text style={{
+                    color: '#3493d9',
+                    fontSize: 18
+                }}>
+                    Change profile photo
+                </Text>
+            </View>
+            <View style={{
+                padding: 18
+            }}>
+                <View style={{
+                    marginBottom: 10
+                }}>
+                    <Text style={{
+                        opacity: 0.5,
+                        fontSize: 16
+                    }}>
+                        Name
+                    </Text>
+                    <TextInput placeholder='name' defaultValue={name}
+                        style={{
+                            fontSize: 16,
+                            borderBottomWidth: 1,
+                            borderColor: '#cdcdcd'
+                        }} />
+                </View>
+                <View style={{
+                    marginBottom: 10
+                }}>
+                    <Text style={{
+                        opacity: 0.5,
+                        fontSize: 16
+                    }}>
+                        Account name
+                    </Text>
+                    <TextInput placeholder='name' defaultValue={accountName}
+                        style={{
+                            fontSize: 16,
+                            borderBottomWidth: 1,
+                            borderColor: '#cdcdcd'
+                        }} />
+                </View>
             </View>
         </View>
     );
