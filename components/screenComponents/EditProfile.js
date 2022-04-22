@@ -85,6 +85,8 @@ const EditProfile = ({ route, navigation }) => {
                     }}>
                         Account name
                     </Text>
+
+
                     <TextInput placeholder='Account name' defaultValue={accountName}
                         style={{
                             fontSize: 16,
