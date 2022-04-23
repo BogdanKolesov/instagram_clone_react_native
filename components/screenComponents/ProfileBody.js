@@ -238,6 +238,7 @@ export const ProfileButtons = ({ id, name, accountName, profileImage }) => {
                                 color: 'black'
                             }} />
                         </View>
+
                     </View>
                 )
             }
