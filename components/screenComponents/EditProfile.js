@@ -94,6 +94,53 @@ const EditProfile = ({ route, navigation }) => {
                             borderColor: '#cdcdcd'
                         }} />
                 </View>
+                <View style={{
+                    marginBottom: 10
+                }}>
+                    <TextInput placeholder='Website'
+                        style={{
+                            fontSize: 16,
+                            borderBottomWidth: 1,
+                            borderColor: '#cdcdcd'
+                        }} />
+                </View>
+                <View style={{
+                    marginBottom: 10
+
+                }}>
+                    <TextInput placeholder='Bio'
+                        style={{
+                            fontSize: 16,
+                            borderBottomWidth: 1,
+                            borderColor: '#cdcdcd'
+                        }} />
+                </View>
+            </View>
+            <View>
+                <Text style={{
+                    marginVertical: 10,
+                    padding: 10,
+                    color: '#3493d9',
+                    borderTopWidth: 1,
+                    borderBottomWidth: 1,
+                    borderColor: '#dedede',
+                    fontSize: 16
+
+                }}>
+                    Switch to Professional account
+                </Text>
+                <Text style={{
+                    marginVertical: 10,
+                    padding: 10,
+                    color: '#3493d9',
+                    borderTopWidth: 1,
+                    borderBottomWidth: 1,
+                    borderColor: '#dedede',
+                    fontSize: 16
+
+                }}>
+                    Personal information settings
+                </Text>
             </View>
         </View>
     );
