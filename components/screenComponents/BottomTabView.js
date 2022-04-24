@@ -21,7 +21,6 @@ const BottomTabView = () => {
                     opacity: 0.1
 
                 }}>
-
                 </View>
             </View>
         )
